@@ -2,6 +2,7 @@ from process_metrics import process_metrics as psm
 from product_metrics import product_metrics as pdm
 import file_operation as fo
 import module as m
+import sys
 
 def main_func(root, ver, prev_ver):
     # files in previous version
@@ -41,9 +42,14 @@ def printModules(mod):
     print(mod.M7)
     print(mod.M8)
 
-root = '../test-data/'
-ver = 'curr'
-prev_ver = 'prev'
-list = main_func(root, ver=ver, prev_ver=prev_ver)
-for l in list:
-    printModules(l)
+if __name__ == '__main__':
+    args = sys.argv
+    root = args[1]
+    ver = args[2]
+    prev_ver = args[3]
+    # root = '../test-data/'
+    # ver = 'curr'
+    # prev_ver = 'prev'
+    list = main_func(root, ver=ver, prev_ver=prev_ver)
+    for l in list:
+        printModules(l)
