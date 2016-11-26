@@ -29,6 +29,7 @@ def test_product_metrics():
     mod = pdm.getProcuctMetrics(mod)
     mod = psm.getProcessMetrics(mod, prev_filename)
     printModules(mod)
+
 def test_trans_filename():
     root = '../test-data/'
     ver = 'curr'
@@ -41,8 +42,6 @@ def test_trans_filename():
     # get list about files under current repository
     list = fo.fild_all_files(root + ver)
     for mod in list:
-        # get product metrics
-        mod = pdm.getProcuctMetrics(mod)
         # find same file from previous version
         if type (mod) ==  m.Module:
             if mod.filename in transed_files:
