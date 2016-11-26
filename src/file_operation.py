@@ -6,7 +6,7 @@ def fild_all_files(directory):
     for root, dirs, files in os.walk(directory):
         for file_ in files:
             full_path = os.path.join(root, file_)
-            # isJava = re.search(full_path, r'(\.java)$')
+            # append list only java file
             isJava = re.search("\.JAVA$",full_path.upper())
             if isJava is not None :
                 list.append(m.Module(full_path))
@@ -17,7 +17,7 @@ def get_all_files_text(directory):
     for root, dirs, files in os.walk(directory):
         for file_ in files:
             full_path = os.path.join(root, file_)
-            # isJava = re.search(full_path, r'(\.java)$')
+            # append list only java file
             isJava = re.search("\.JAVA$",full_path.upper())
             if isJava is not None :
                 list.append(full_path)
