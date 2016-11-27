@@ -16,7 +16,8 @@ def getProcuctMetrics(m):
     tcomm = 0   # number of comment line
     mchar = 0   # number of comment characters
     dchar = 0   # number of code characters
-    
+    isCommenting = False
+
     for line in f:
         if len(line)>0:
             loc += 1

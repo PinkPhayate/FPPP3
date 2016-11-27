@@ -29,10 +29,15 @@ def main_func(root, ver, prev_ver):
                 # if not, isNew attribute = 1
                 mod.isNew = 1
     return list
+
 def printModules(mod):
     print(mod.filename)
     print(mod.LOC)
     print(mod.TChar)
+    print(mod.CL)
+    print(mod.TComm)
+    print(mod.MChar)
+    print(mod.DChar)
     print(mod.M1)
     print(mod.M2)
     print(mod.M3)
