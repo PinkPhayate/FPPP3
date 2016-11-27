@@ -16,8 +16,12 @@ This repository works to get product metrics and process metrics in order to [pr
 
 ### Product Metrics
 
-+ LOC
-+ TChar
++ LOC    number of total line
++ TChar  number of total character
++ CL     number of code line
++ TComm  number of comment line
++ MChar  number of comment characters
++ DChar  number of code characters
 
 -- Working now --
 
