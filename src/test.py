@@ -6,6 +6,10 @@ def printModules(mod):
     print(mod.filename)
     print(mod.LOC)
     print(mod.TChar)
+    print(mod.CL)
+    print(mod.TComm)
+    print(mod.MChar)
+    print(mod.DChar)
     print(mod.M1)
     print(mod.M2)
     print(mod.M3)
@@ -23,11 +27,11 @@ def test_process_metrics():
     printModules(mod)
 
 def test_product_metrics():
-    full_path = '../test-data/curr/curr_test.java'
-    prev_filename = '../test-data/prev/curr_test.java'
+    full_path = '../test-data/curr/comment_test.java'
+    prev_filename = '../test-data/prev/comment_test.java'
     mod = m.Module(full_path)
     mod = pdm.getProcuctMetrics(mod)
-    mod = psm.getProcessMetrics(mod, prev_filename)
+    # mod = psm.getProcessMetrics(mod, prev_filename)
     printModules(mod)
 
 def test_trans_filename():
@@ -49,3 +53,5 @@ def test_trans_filename():
                 transed_filename = mod.filename.replace(ver, prev_ver)
                 print(origin_files[ origin_files.index(transed_filename) ])
                 print(mod.filename)
+
+test_product_metrics()
