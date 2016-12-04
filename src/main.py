@@ -6,12 +6,12 @@ import sys
 
 def main_func(root, ver, prev_ver):
     # files in previous version
-    origin_files = fo.get_all_files_text(root + prev_ver)
+    origin_files = fo.get_all_files_text(root + '/' + prev_ver)
     # due to find same file under previous version
     transed_files = fo.exchangea_files(origin_files, prev_ver, ver)
 
     # get list about files under current repository
-    list = fo.fild_all_files(root + ver)
+    list = fo.fild_all_files(root + '/' + ver)
 
     for mod in list:
         # get product metrics

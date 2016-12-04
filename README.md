@@ -31,8 +31,30 @@ This repository works to get product metrics and process metrics in order to [pr
 + measure 8 metrics written in article[1]
 
 ### Execution
+1. put target source code in 'target' directory.
 
-+ python -B main.py root_directory current-version previous-version
+for example...
+
+```
+MainDir
+  |-README.md
+  |-src
+  |-test-data
+  |-target
+        |-previous-version
+                  |-source codes
+        |- current-version
+                  |-source codes
+```
+2. operate python command below in terminal
+  + param1: root directory having target source codes
+  + param2: directory name having target file in current version
+  + param3: directory name having target file in previous version
+
+for example...
+```python
+python -B ./src/main.py target current-version previous-version
+```
 
 ### Reference
 
